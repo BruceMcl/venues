@@ -49,6 +49,5 @@ array( "{$CFG->dbprefix}booking",
 
     UNIQUE(link_id, user_id)
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8")
-)
-;
+);
 
