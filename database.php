@@ -18,19 +18,18 @@ array( "{$CFG->dbprefix}venue",
     venue_id  INTEGER NOT NULL,
     added_on  DATETIME NOT NULL,
 
-    CONSTRAINT `{$CFG->dbprefix}attend_ibfk_1`
+    CONSTRAINT `{$CFG->dbprefix}venue_ibfk_1`
         FOREIGN KEY (`link_id`)
         REFERENCES `{$CFG->dbprefix}lti_link` (`link_id`)
         ON DELETE CASCADE ON UPDATE CASCADE,
 
-    CONSTRAINT `{$CFG->dbprefix}attend_ibfk_2`
+    CONSTRAINT `{$CFG->dbprefix}venue_ibfk_2`
         FOREIGN KEY (`user_id`)
         REFERENCES `{$CFG->dbprefix}lti_user` (`user_id`)
         ON DELETE CASCADE ON UPDATE CASCADE,
 
     UNIQUE(link_id, user_id, venue_id)
-) ENGINE = InnoDB DEFAULT CHARSET=utf8")
-),
+) ENGINE = InnoDB DEFAULT CHARSET=utf8"),
 
 array( "{$CFG->dbprefix}booking",
 "create table {$CFG->dbprefix}booking (
@@ -38,12 +37,12 @@ array( "{$CFG->dbprefix}booking",
     user_id     INTEGER NOT NULL,
     booking_Date  INTEGER NOT NULL,    
 
-    CONSTRAINT `{$CFG->dbprefix}attend_ibfk_1`
+    CONSTRAINT `{$CFG->dbprefix}booking_ibfk_1`
         FOREIGN KEY (`link_id`)
         REFERENCES `{$CFG->dbprefix}lti_link` (`link_id`)
         ON DELETE CASCADE ON UPDATE CASCADE,
 
-    CONSTRAINT `{$CFG->dbprefix}attend_ibfk_2`
+    CONSTRAINT `{$CFG->dbprefix}booking_ibfk_2`
         FOREIGN KEY (`user_id`)
         REFERENCES `{$CFG->dbprefix}lti_user` (`user_id`)
         ON DELETE CASCADE ON UPDATE CASCADE,        
