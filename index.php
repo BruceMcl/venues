@@ -17,7 +17,7 @@ if (isset($_POST["createVenuew"]))
 {
 echo "<script type='text/javascript'>alert(In post);</script>";
 }
-if (issset($_POST["addBooking"]))
+if (isset($_POST["addBooking"]))
 {
 }
 
