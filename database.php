@@ -29,8 +29,7 @@ array( "{$CFG->dbprefix}venue",
         ON DELETE CASCADE ON UPDATE CASCADE,
 
     UNIQUE(link_id, user_id, venue_id)
-) ENGINE = InnoDB DEFAULT CHARSET=utf8")),
-$DATABASE_INSTALL = array(
+) ENGINE = InnoDB DEFAULT CHARSET=utf8"),
 array( "{$CFG->dbprefix}booking",
 "create table {$CFG->dbprefix}booking (
     link_id     INTEGER NOT NULL,
