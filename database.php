@@ -7,7 +7,7 @@ $DATABASE_UNINSTALL = array(
 );
 
 // The SQL to create the tables if they don't exist
-$DATABASE_INSTALL = array(
+
 
 
 $DATABASE_INSTALL = array(
@@ -29,8 +29,8 @@ array( "{$CFG->dbprefix}venue",
         ON DELETE CASCADE ON UPDATE CASCADE,
 
     UNIQUE(link_id, user_id, venue_id)
-) ENGINE = InnoDB DEFAULT CHARSET=utf8"),
-
+) ENGINE = InnoDB DEFAULT CHARSET=utf8")),
+$DATABASE_INSTALL = array(
 array( "{$CFG->dbprefix}booking",
 "create table {$CFG->dbprefix}booking (
     link_id     INTEGER NOT NULL,
@@ -48,6 +48,5 @@ array( "{$CFG->dbprefix}booking",
         ON DELETE CASCADE ON UPDATE CASCADE,        
 
     UNIQUE(link_id, user_id)
-) ENGINE = InnoDB DEFAULT CHARSET=utf8")
-);
+) ENGINE = InnoDB DEFAULT CHARSET=utf8"));
 
