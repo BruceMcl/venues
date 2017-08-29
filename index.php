@@ -16,10 +16,8 @@ $LAUNCH = LTIX::requireData();
 
 if (isset($_POST['createVenue']))
 {
-unset($_POST['createVenue']);
-unset($_POST['txtVenue']);
-unset($_POST['txtDate']);
-echo "<script type='text/javascript'>alert(In post);</script>";
+echo "Here";
+return;
 }
 if (isset($_POST['addBooking']))
 {
