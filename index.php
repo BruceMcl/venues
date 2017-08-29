@@ -14,11 +14,11 @@ $LAUNCH = LTIX::requireData();
 
 // Handle Post Data
 
-if (isset($_POST["createVenue"]))
+if (isset($_POST['createVenue']))
 {
 echo "<script type='text/javascript'>alert(In post);</script>";
 }
-if (isset($_POST["addBooking"]))
+if (isset($_POST['addBooking']))
 {
 }
 
@@ -46,7 +46,7 @@ echo("<table>
 </tr>
 <tr>
 <td>
-<input type='submit' name='createVenue' value='createVenue'>
+<input type='submit' name='createVenue' value='Go'>
 </td>
 </tr>
 </form>
