@@ -19,14 +19,14 @@ if (isset($_POST['createVenue']))
 
   $PDOX->queryDie("INSERT INTO {$p}venue
             (link_id, user_id, venue_id, added_on)
-            VALUES ( :LI, :UI, :venue_id, :added_on ),
+            VALUES ( :LI, :UI, :venue_id, :added_on )",
             array(
                 ':LI' => $LINK->id,
                 ':UI' => $USER->id,
                 ':venue_id' => $_POST['txtVenue'],
                 ':added_on' =>$_POST['txtDate']
             )
-            ");
+            );
             
 
 
