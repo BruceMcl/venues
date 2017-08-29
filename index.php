@@ -17,7 +17,7 @@ $LAUNCH = LTIX::requireData();
 if (isset($_POST['createVenue']))
 {
 
- /*  $PDOX->queryDie("INSERT INTO {$p}venue
+  $PDOX->queryDie("INSERT INTO {$p}venue
             (link_id, user_id, venue_id, added_on)
             VALUES ( :LI, :UI, :IP, NOW(), NOW() )
             ON DUPLICATE KEY UPDATE updated_at = NOW()",
@@ -27,7 +27,8 @@ if (isset($_POST['createVenue']))
                 ':venue_id' => $_POST['txtVenue'],
                 ':added_on' =>$_POST['txtDate']
             )
-            */
+            );
+            
 
 
 return;
@@ -61,7 +62,7 @@ echo("<table>
 </tr>
 <tr>
 <td><input type='text' required name='txtVenue' id='txtVenue' /></td>
-<td><input type='date' required name='txtDate' id='txtDate' /></td>
+<td><input type='text' required name='txtDate' id='txtDate' /></td>
 </tr>
 <tr>
 <td>
