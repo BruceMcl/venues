@@ -9,11 +9,12 @@ use \Tsugi\Core\Settings;
 use \Tsugi\Util\Net;
 
 // No parameter means we require CONTEXT, USER, and LINK
+$LAUNCHSESSION = LTIX::session_start(); 
 $LAUNCH = LTIX::requireData();
 
 // Handle Post Data
 
-if (isset($_POST["createVenuew"]))
+if (isset($_POST["createVenue"]))
 {
 echo "<script type='text/javascript'>alert(In post);</script>";
 }
@@ -34,7 +35,7 @@ echo("<!-- Classic single-file version of the tool -->\n");
 //Body content here:
 echo("Add new venue");
 echo("<table>
-<form>
+<form method='post'>
 <tr>
 <td>Venue:</td>
 <td>Date:</td>
@@ -44,7 +45,9 @@ echo("<table>
 <td><input type='text' required name='txtDate' id='txtDate' /></td>
 </tr>
 <tr>
+<td>
 <input type='submit' value='createVenue'>
+</td>
 </tr>
 </form>
 </table>");
