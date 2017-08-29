@@ -13,13 +13,13 @@ $LAUNCHSESSION = LTIX::session_start();
 $LAUNCH = LTIX::requireData();
 
 // Handle Post Data
-
+$p = $CFG->dbprefix;
 if (isset($_POST['createVenue']))
 {
 
   $PDOX->queryDie("INSERT INTO {$p}venue
             (link_id, user_id, venue_id, added_on)
-            VALUES ( :LI, :UI, :IP, NOW(), NOW() )
+            VALUES ( :LI, :UI, NOW(), NOW() )
             ON DUPLICATE KEY UPDATE updated_at = NOW()",
             array(
                 ':LI' => $LINK->id,
