@@ -24,7 +24,7 @@ if (isset($_POST['createVenue']))
             array(
                 ':LI' => $LINK->id,
                 ':UI' => $USER->id,
-                ':added_on' => $_POST['txtVenue'],
+                ':venue_id' => $_POST['txtVenue'],
                 ':added_on' =>$_POST['txtDate']
             )
             );
