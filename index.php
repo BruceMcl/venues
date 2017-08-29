@@ -26,7 +26,7 @@ if (isset($_POST['createVenue']))
                 ':venue_id' => $_POST['txtVenue'],
                 ':added_on' =>$_POST['txtDate']
             )
-            );
+            ");
             
 
 
