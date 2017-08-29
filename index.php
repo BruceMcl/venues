@@ -19,12 +19,12 @@ if (isset($_POST['createVenue']))
 
   $PDOX->queryDie("INSERT INTO {$p}venue
             (link_id, user_id, venue_id, added_on)
-            VALUES ( :LI, :UI, NOW(), NOW() )
-            ON DUPLICATE KEY UPDATE updated_at = NOW()",
+            VALUES ( :LI, :UI, :venue_id, :added_on )
+            ON DUPLICATE KEY UPDATE updated_at = :added_on",
             array(
                 ':LI' => $LINK->id,
                 ':UI' => $USER->id,
-                ':venue_id' => $_POST['txtVenue'],
+                ':added_on' => $_POST['txtVenue'],
                 ':added_on' =>$_POST['txtDate']
             )
             );
