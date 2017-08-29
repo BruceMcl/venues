@@ -1,5 +1,3 @@
-
-<?php
 echo("Add new venue");
 echo("<table>
 <form method='post'>
@@ -18,4 +16,3 @@ echo("<table>
 </tr>
 </form>
 </table>");
-?>
