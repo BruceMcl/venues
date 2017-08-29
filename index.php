@@ -16,11 +16,26 @@ $LAUNCH = LTIX::requireData();
 
 if (isset($_POST['createVenue']))
 {
-echo "Here";
+
+   $PDOX->queryDie("INSERT INTO {$p}venue
+            (link_id, user_id, venue_id, added_on)
+            VALUES ( :LI, :UI, :IP, NOW(), NOW() )
+            ON DUPLICATE KEY UPDATE updated_at = NOW()",
+            array(
+                ':LI' => $LINK->id,
+                ':UI' => $USER->id,
+                ':venue_id' => $_POST['txtVenue'],
+                ':added_on' =>$_POST['txtDate']
+            )
+
+
 return;
 }
 if (isset($_POST['addBooking']))
 {
+
+
+return;
 }
 
 // Render view
@@ -34,25 +49,8 @@ echo("<!-- Classic single-file version of the tool -->\n");
 
 // We could use the settings form - but we will keep this simple
 //Body content here:
-echo("Add new venue");
-echo("<table>
-<form method='post'>
-<tr>
-<td>Venue:</td>
-<td>Date:</td>
-</tr>
-<tr>
-<td><input type='text' required name='txtVenue' id='txtVenue' /></td>
-<td><input type='text' required name='txtDate' id='txtDate' /></td>
-</tr>
-<tr>
-<td>
-<input type='submit' name='createVenue' id='createVenue' value='Go'>
-</td>
-</tr>
-</form>
-</table>");
-
+include(addVenue.php);
+//include(makeBooking.php);
 
 
 

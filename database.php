@@ -15,7 +15,7 @@ array( "{$CFG->dbprefix}venue",
 "create table {$CFG->dbprefix}venue (
     link_id     INTEGER NOT NULL,
     user_id     INTEGER NOT NULL,
-    venue_id  INTEGER NOT NULL,
+    venue_id  TEXT NOT NULL,
     added_on  DATETIME NOT NULL,
 
     CONSTRAINT `{$CFG->dbprefix}venue_ibfk_1`
@@ -34,6 +34,7 @@ array( "{$CFG->dbprefix}booking",
 "create table {$CFG->dbprefix}booking (
     link_id     INTEGER NOT NULL,
     user_id     INTEGER NOT NULL,
+    venue_id 	TEXT NOT NULL,
     booking_Date  INTEGER NOT NULL,    
 
     CONSTRAINT `{$CFG->dbprefix}booking_ibfk_1`
