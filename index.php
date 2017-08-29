@@ -46,7 +46,7 @@ echo("<table>
 </tr>
 <tr>
 <td>
-<input type='submit' name='createVenue" value='createVenue'>
+<input type='submit' name='createVenue' value='createVenue'>
 </td>
 </tr>
 </form>
